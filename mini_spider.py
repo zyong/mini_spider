@@ -27,12 +27,14 @@ import argparse
 import os
 import logging
 
+import webpage_exception
 import webpage_config
 import webpage_manager
 
+
 __version__ = 1.0
 
-def create_logger_handler():
+def create_logger_handler(error_log= 'test.log'):
     """
     创建logger
     :return:
@@ -42,7 +44,7 @@ def create_logger_handler():
     logger.setLevel(logging.DEBUG)
 
     # create a log handler for writing into file
-    fh = logging.FileHandler('test.log')
+    fh = logging.FileHandler(error_log)
     fh.setLevel(logging.DEBUG)
 
     # create a log handler for
@@ -64,10 +66,6 @@ def main():
     主程序
     :return:
     """
-    # 设置日志
-    create_logger_handler()
-    logging.info("Starting mini spider")
-
     parser = argparse.ArgumentParser()
     parser.add_argument("-v", help="version info",
                         action="store_true")
@@ -78,7 +76,7 @@ def main():
     # 默认配置文件
     conf_file = './spider.conf'
     if args.v:
-        print __version__
+        print "version:{0}".format(__version__)
         return
 
     if len(args.c) > 0 and os.path.exists(args.c):
@@ -91,9 +89,15 @@ def main():
     # 任务队列
     try:
         config = webpage_config.Config(conf_file)
+        config.load('spider')
     except Exception as e:
         logging.error("load conf failed message {0}".format(e.message))
         os.exit(2)
+
+    # 设置日志
+    create_logger_handler(config.get('error_log'))
+    logging.info("Starting mini spider")
+
 
     manager = webpage_manager.Manager(config)
     manager.run()

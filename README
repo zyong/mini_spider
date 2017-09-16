@@ -1,0 +1,27 @@
+本程序实现为code review开发，实现基本的抓取功能
+基础目录包括
+
+- output                文件保存目录，根据配置变化
+- test                  单元测试目录，包含testsuit文件，可以直接执行
+- mini_spider.py        主程序
+- seedfile_load.py      种子urls加载程序
+- spider.conf           配置文件
+- test.log              错误日志文件，根据配置变化
+- webpage_config.py     配置处理程序
+- webpage_crawler.py    抓取模块
+- webpage_exception.py  整体异常模块
+- webpage_manager.py    抓取任务管理模块
+- webpage_parser.py     网页解析模块
+- webpage_saver.py      网页保存模块
+
+
+# 执行单元测试
+提供整体的执行套件，可以运行test目录下的webpage_testsuit.py文件
+python webpage_testsuit.py
+
+也可以单个执行每个测试case
+python -m unittest webpage_crawler_test
+
+# 执行抓取功能
+python mini_spider.py
+

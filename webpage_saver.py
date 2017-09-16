@@ -48,6 +48,8 @@ class Saver(object):
         path = self._config.get('output_directory')
         real_path = os.path.abspath(path)
         file_path = real_path + os.sep + filename
+        if os.path.exists(real_path) is False:
+            os.makedirs(real_path)
 
         try:
             with open(file_path, 'w') as f:

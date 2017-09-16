@@ -23,7 +23,7 @@ class Manager(object):
     def __init__(self, config):
         self._config = config
         self._crawl_task_queue = Queue.Queue()
-        self._crawl_theads = []
+        self._crawl_threads = []
         self.url_table = url_table.UrlTable()
 
     def run(self):
@@ -40,10 +40,10 @@ class Manager(object):
         for url in seed_file.get():
             self.add_new_task(url, 0)
 
-        for i in range(0, self._config.thread_count):
-            self._crawl_theads.append(webpage_crawler.Crawler(self, str(i)))
+        for i in range(0, int(self._config.get('thread_count'))):
+            self._crawl_threads.append(webpage_crawler.Crawler(self, str(i)))
 
-        for thread in self._crawl_theads:
+        for thread in self._crawl_threads:
             thread.setDaemon(True)
             thread.start()
 
@@ -62,7 +62,7 @@ class Manager(object):
         # use url_table check whether new url
         if not self.url_table.insert_url(url):
             return False
-        max_depth = int(self._config.get('spider', 'max_depth'))
+        max_depth = int(self._config.get('max_depth'))
         if level > max_depth:
             return True
         self._crawl_task_queue.put((url, level))

@@ -56,6 +56,11 @@ AppleWebKit/534.46 (KHTML,like Gecko) Version/5.1 Mobile Safari/10600.6.3 \
             url = "http://" + url
 
         url = url.strip()
+
+        # 默认PC-UA抓取
+        headers = {
+            "User-Agent": self.PC_UA
+        }
         try:
             r = requests.get(url, timeout=timeout)
         except AttributeError as e:
@@ -93,7 +98,7 @@ AppleWebKit/534.46 (KHTML,like Gecko) Version/5.1 Mobile Safari/10600.6.3 \
         page_parser = webpage_parser.Parser()
         page_saver = webpage_saver.Saver(self._manager.get_config())
 
-        timeout = self._manager.get_config().getint('spider', 'crawl_timeout')
+        timeout = int(self._manager.get_config().get('crawl_timeout'))
 
         while True:
             self._mutex.acquire()
@@ -124,4 +129,4 @@ AppleWebKit/534.46 (KHTML,like Gecko) Version/5.1 Mobile Safari/10600.6.3 \
             self._manager.task_done()
 
             # 抓取间隔设置
-            time.sleep(self._manager.get_config().getint('spider', 'crawl_interval'))
+            time.sleep(int(self._manager.get_config().get('crawl_interval')))

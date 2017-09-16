@@ -13,6 +13,7 @@ Date:    2017/08/20 16:15
 import ConfigParser
 import logging
 
+import webpage_exception
 
 class Config(object):
 
@@ -36,5 +37,4 @@ class Config(object):
     def get(self, key):
         if key in self.conf_key:
             return self.conf_key[key]
-        else:
-            return
+        raise webpage_exception.ConfigException(u"{0} conf key not find".format(key))
