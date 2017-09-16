@@ -19,15 +19,26 @@ import webpage_saver
 
 
 class MockConfig(object):
+    """
+    mock config class
+    """
     def get(self, key):
+        """
+
+        :param key: conf field
+        :return:
+        """
         if key == "target_url":
             return ".*.(htm|html)$"
 
         if key == "output_directory":
             return "./output"
 
-class SaverTest(unittest.TestCase):
 
+class SaverTest(unittest.TestCase):
+    """
+    test save webpage class
+    """
     def test_save(self):
         """
 

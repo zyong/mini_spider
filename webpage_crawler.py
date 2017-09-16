@@ -16,7 +16,8 @@ import requests
 import time
 
 from requests import ReadTimeout
-from requests.exceptions import InvalidURL, ConnectionError
+from requests.exceptions import InvalidURL
+from requests.exceptions import ConnectionError
 
 import webpage_saver
 import webpage_parser
@@ -24,7 +25,7 @@ import webpage_parser
 
 class Crawler(threading.Thread):
     """
-
+    webpage crawler class
     """
     PC_UA = "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html）"
 

@@ -18,8 +18,14 @@ import url_table
 
 
 class UrlTableTest(unittest.TestCase):
-
+    """
+    url table class test
+    """
     def test_insert_url(self):
+        """
+        test insert url method
+        :return:
+        """
         url1 = "http://pycm.baidu.com:8081"
 
         urlTable = url_table.UrlTable()

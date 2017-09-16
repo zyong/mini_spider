@@ -21,7 +21,7 @@ import sys
 
 class Saver(object):
     """
-
+    save web page content
     """
 
     def __init__(self, config):

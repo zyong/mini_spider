@@ -34,7 +34,7 @@ import webpage_manager
 
 __version__ = 1.0
 
-def create_logger_handler(error_log= 'test.log'):
+def create_logger_handler(error_log='test.log'):
     """
     创建logger
     :return:
@@ -52,7 +52,9 @@ def create_logger_handler(error_log= 'test.log'):
     ch.setLevel(logging.DEBUG)
 
     # define handler format
-    formatter = logging.Formatter('%(asctime)s - [%(filename)s:%(lineno)d] - %(levelname)s - %(message)s')
+    formatter = logging.Formatter(
+        '%(asctime)s - [%(filename)s:%(lineno)d] - %(levelname)s - %(message)s'
+    )
     fh.setFormatter(formatter)
     ch.setFormatter(formatter)
 

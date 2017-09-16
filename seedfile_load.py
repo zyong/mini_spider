@@ -12,13 +12,17 @@ Date:    2017/08/20 16:15
 
 class SeedFileLoad(object):
     """
-
+    seed load class
     """
 
     def __init__(self, seed_file):
         self._seed_file = seed_file
 
     def get(self):
+        """
+        获取种子数据
+        :return:
+        """
         url_set = set()
         with open(self._seed_file, 'r') as f:
             url_set.add(f.readline())

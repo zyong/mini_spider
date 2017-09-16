@@ -19,9 +19,6 @@ class Parser(object):
     parse page content, and get url from content
     """
 
-    def __init__(self):
-        pass
-
     def get_url(self, source_url, document):
         """
         获取所有页面的url

@@ -18,7 +18,7 @@ import webpage_crawler
 
 class Manager(object):
     """
-
+    manager crawler task
     """
     def __init__(self, config):
         self._config = config

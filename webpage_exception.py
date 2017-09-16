@@ -11,4 +11,7 @@ Date:    2017/09/16 21:24
 """
 
 class ConfigException(Exception):
+    """
+    exception base class
+    """
     pass

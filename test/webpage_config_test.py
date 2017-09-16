@@ -16,6 +16,7 @@ import sys
 sys.path.append("..")
 import webpage_config
 
+
 class ConfigLoadTest(unittest.TestCase):
     """
     test manager class
@@ -25,6 +26,10 @@ class ConfigLoadTest(unittest.TestCase):
         self.config.load()
 
     def test_get(self):
+        """
+        test get conf field method
+        :return:
+        """
         assert self.config.get('url_list_file') == './urls'
         assert self.config.get('output_directory') == './output'
         assert self.config.get('max_depth') == '1'

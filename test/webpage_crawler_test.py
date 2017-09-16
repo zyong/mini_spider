@@ -22,9 +22,17 @@ class MockManager(object):
     mock a test object
     """
     def run(self):
+        """
+        mock run method
+        :return:
+        """
         pass
 
     def add_new_task(self):
+        """
+        mock add method
+        :return:
+        """
         pass
 
 
@@ -39,7 +47,7 @@ class CrawlerTest(unittest.TestCase):
 
     def test_downloader(self):
         """
-
+        test downloader method
         :return:
         """
         result = self.crawler.downloader("http://www.baidu.com/", 1)

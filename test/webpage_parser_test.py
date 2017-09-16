@@ -19,8 +19,14 @@ import webpage_parser
 
 
 class ParserTest(unittest.TestCase):
-
+    """
+    test parser web page class
+    """
     def test_get_url(self):
+        """
+        test get url method
+        :return:
+        """
         if os.path.exists('./test.html') is False:
             return False
 
