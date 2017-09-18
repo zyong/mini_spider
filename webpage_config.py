@@ -11,7 +11,6 @@ Date:    2017/08/20 16:15
 """
 
 import ConfigParser
-import logging
 
 import webpage_exception
 

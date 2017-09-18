@@ -23396,3 +23396,141 @@ http://tech.ifeng.com/a/20170916/44686218_0.shtml
 2017-09-16 21:30:27,490 - [connectionpool.py:395] - DEBUG - http://www.baidu.com:80 "GET /more/ HTTP/1.1" 200 11633
 2017-09-16 21:30:27,490 - [connectionpool.py:395] - DEBUG - http://www.baidu.com:80 "GET /more/ HTTP/1.1" 200 11633
 2017-09-16 21:33:45,574 - [mini_spider.py:70] - INFO - Starting mini spider
+2017-09-16 22:21:16,818 - [mini_spider.py:101] - INFO - Starting mini spider
+2017-09-16 22:21:16,824 - [webpage_crawler.py:116] - INFO - url:http://www.baidu.com
+,level:0 start to crawl
+2017-09-16 22:21:16,847 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.baidu.com
+2017-09-16 22:21:17,282 - [connectionpool.py:395] - DEBUG - http://www.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:21:17,308 - [webpage_crawler.py:116] - INFO - url:http://map.baidu.com,level:1 start to crawl
+2017-09-16 22:21:17,309 - [webpage_crawler.py:116] - INFO - url:http://ir.baidu.com,level:1 start to crawl
+2017-09-16 22:21:17,309 - [webpage_crawler.py:116] - INFO - url:http://home.baidu.com,level:1 start to crawl
+2017-09-16 22:21:17,321 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): map.baidu.com
+2017-09-16 22:21:17,322 - [webpage_crawler.py:116] - INFO - url:http://jianyi.baidu.com/,level:1 start to crawl
+2017-09-16 22:21:17,323 - [webpage_crawler.py:116] - INFO - url:http://news.baidu.com,level:1 start to crawl
+2017-09-16 22:21:17,324 - [webpage_crawler.py:116] - INFO - url:http://tieba.baidu.com,level:1 start to crawl
+2017-09-16 22:21:17,328 - [webpage_crawler.py:116] - INFO - url:http://www.hao123.com,level:1 start to crawl
+2017-09-16 22:21:17,339 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): ir.baidu.com
+2017-09-16 22:21:17,343 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): news.baidu.com
+2017-09-16 22:21:17,347 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): home.baidu.com
+2017-09-16 22:21:17,352 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): tieba.baidu.com
+2017-09-16 22:21:17,353 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): jianyi.baidu.com
+2017-09-16 22:21:17,355 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.hao123.com
+2017-09-16 22:21:17,537 - [connectionpool.py:395] - DEBUG - http://map.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:21:18,233 - [connectionpool.py:395] - DEBUG - http://jianyi.baidu.com:80 "GET / HTTP/1.1" 302 0
+2017-09-16 22:21:18,236 - [connectionpool.py:395] - DEBUG - http://tieba.baidu.com:80 "GET / HTTP/1.1" 302 0
+2017-09-16 22:21:18,252 - [connectionpool.py:818] - DEBUG - Starting new HTTPS connection (1): tieba.baidu.com
+2017-09-16 22:21:18,254 - [connectionpool.py:395] - DEBUG - http://news.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:21:18,255 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): help.baidu.com
+2017-09-16 22:21:18,388 - [webpage_crawler.py:116] - INFO - url:http://v.baidu.com,level:1 start to crawl
+2017-09-16 22:21:18,392 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): v.baidu.com
+2017-09-16 22:21:18,585 - [connectionpool.py:395] - DEBUG - http://ir.baidu.com:80 "GET / HTTP/1.1" 302 749
+2017-09-16 22:21:18,621 - [webpage_crawler.py:116] - INFO - url:http://www.baidu.com/duty/,level:1 start to crawl
+2017-09-16 22:21:18,627 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.baidu.com
+2017-09-16 22:21:18,690 - [connectionpool.py:395] - DEBUG - http://www.baidu.com:80 "GET /duty/ HTTP/1.1" 200 2451
+2017-09-16 22:21:18,738 - [connectionpool.py:395] - DEBUG - http://help.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:21:18,819 - [connectionpool.py:395] - DEBUG - http://www.hao123.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:21:18,852 - [connectionpool.py:395] - DEBUG - http://ir.baidu.com:80 "GET /phoenix.zhtml?c=188488&p=irol-irhome HTTP/1.1" 200 4211
+2017-09-16 22:21:18,952 - [connectionpool.py:395] - DEBUG - https://tieba.baidu.com:443 "GET /index.html HTTP/1.1" 200 None
+2017-09-16 22:21:18,993 - [connectionpool.py:395] - DEBUG - http://v.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:21:19,204 - [webpage_crawler.py:77] - ERROR - Connection Error url http://home.baidu.com
+2017-09-16 22:21:19,207 - [webpage_crawler.py:128] - ERROR - crawl url http://home.baidu.com failed, status code 4
+2017-09-16 22:21:19,394 - [webpage_crawler.py:116] - INFO - url:http://www.baidu.com/bdorz/login.gif?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2f%3fbdorz_come%3d1,level:1 start to crawl
+2017-09-16 22:21:19,410 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.baidu.com
+2017-09-16 22:21:19,431 - [connectionpool.py:395] - DEBUG - http://www.baidu.com:80 "GET /bdorz/login.gif?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2f%3fbdorz_come%3d1 HTTP/1.1" 302 161
+2017-09-16 22:21:19,453 - [connectionpool.py:818] - DEBUG - Starting new HTTPS connection (1): passport.baidu.com
+2017-09-16 22:21:19,720 - [webpage_crawler.py:116] - INFO - url:http://www.baidu.com/more/,level:1 start to crawl
+2017-09-16 22:21:19,735 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.baidu.com
+2017-09-16 22:21:19,864 - [connectionpool.py:395] - DEBUG - http://www.baidu.com:80 "GET /more/ HTTP/1.1" 200 11633
+2017-09-16 22:21:20,032 - [connectionpool.py:395] - DEBUG - https://passport.baidu.com:443 "GET /v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2f%3fbdorz_come%3d1 HTTP/1.1" 200 None
+2017-09-16 22:21:53,746 - [mini_spider.py:101] - INFO - Starting mini spider
+2017-09-16 22:21:53,749 - [webpage_crawler.py:116] - INFO - url:http://www.baidu.com
+,level:0 start to crawl
+2017-09-16 22:21:53,764 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.baidu.com
+2017-09-16 22:21:53,776 - [connectionpool.py:395] - DEBUG - http://www.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:21:53,790 - [webpage_crawler.py:116] - INFO - url:http://map.baidu.com,level:1 start to crawl
+2017-09-16 22:21:53,791 - [webpage_crawler.py:116] - INFO - url:http://ir.baidu.com,level:1 start to crawl
+2017-09-16 22:21:53,791 - [webpage_crawler.py:116] - INFO - url:http://home.baidu.com,level:1 start to crawl
+2017-09-16 22:21:53,791 - [webpage_crawler.py:116] - INFO - url:http://jianyi.baidu.com/,level:1 start to crawl
+2017-09-16 22:21:53,791 - [webpage_crawler.py:116] - INFO - url:http://news.baidu.com,level:1 start to crawl
+2017-09-16 22:21:53,792 - [webpage_crawler.py:116] - INFO - url:http://tieba.baidu.com,level:1 start to crawl
+2017-09-16 22:21:53,797 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): map.baidu.com
+2017-09-16 22:21:53,798 - [webpage_crawler.py:116] - INFO - url:http://www.hao123.com,level:1 start to crawl
+2017-09-16 22:21:53,800 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): ir.baidu.com
+2017-09-16 22:21:53,810 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): jianyi.baidu.com
+2017-09-16 22:21:53,814 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): news.baidu.com
+2017-09-16 22:21:53,818 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): home.baidu.com
+2017-09-16 22:21:53,819 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): tieba.baidu.com
+2017-09-16 22:21:53,821 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.hao123.com
+2017-09-16 22:21:54,032 - [connectionpool.py:395] - DEBUG - http://map.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:21:54,250 - [connectionpool.py:395] - DEBUG - http://jianyi.baidu.com:80 "GET / HTTP/1.1" 302 0
+2017-09-16 22:21:54,259 - [connectionpool.py:395] - DEBUG - http://tieba.baidu.com:80 "GET / HTTP/1.1" 302 0
+2017-09-16 22:21:54,288 - [connectionpool.py:395] - DEBUG - http://news.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:21:54,301 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): help.baidu.com
+2017-09-16 22:21:54,303 - [connectionpool.py:818] - DEBUG - Starting new HTTPS connection (1): tieba.baidu.com
+2017-09-16 22:21:54,724 - [connectionpool.py:395] - DEBUG - http://help.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:21:54,788 - [connectionpool.py:395] - DEBUG - http://www.hao123.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:21:54,801 - [webpage_crawler.py:116] - INFO - url:http://v.baidu.com,level:1 start to crawl
+2017-09-16 22:21:54,839 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): v.baidu.com
+2017-09-16 22:21:54,932 - [connectionpool.py:395] - DEBUG - https://tieba.baidu.com:443 "GET /index.html HTTP/1.1" 200 None
+2017-09-16 22:21:55,107 - [webpage_crawler.py:116] - INFO - url:http://www.baidu.com/duty/,level:1 start to crawl
+2017-09-16 22:21:55,130 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.baidu.com
+2017-09-16 22:21:55,157 - [connectionpool.py:395] - DEBUG - http://www.baidu.com:80 "GET /duty/ HTTP/1.1" 200 2451
+2017-09-16 22:21:55,298 - [connectionpool.py:395] - DEBUG - http://v.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:21:55,446 - [webpage_crawler.py:116] - INFO - url:http://www.baidu.com/bdorz/login.gif?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2f%3fbdorz_come%3d1,level:1 start to crawl
+2017-09-16 22:21:55,455 - [webpage_crawler.py:71] - ERROR - read timeout http://ir.baidu.com
+2017-09-16 22:21:55,462 - [webpage_crawler.py:128] - ERROR - crawl url http://ir.baidu.com failed, status code 2
+2017-09-16 22:21:55,473 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.baidu.com
+2017-09-16 22:21:55,503 - [connectionpool.py:395] - DEBUG - http://www.baidu.com:80 "GET /bdorz/login.gif?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2f%3fbdorz_come%3d1 HTTP/1.1" 302 161
+2017-09-16 22:21:55,523 - [connectionpool.py:818] - DEBUG - Starting new HTTPS connection (1): passport.baidu.com
+2017-09-16 22:21:55,649 - [webpage_crawler.py:77] - ERROR - Connection Error url http://home.baidu.com
+2017-09-16 22:21:55,650 - [webpage_crawler.py:128] - ERROR - crawl url http://home.baidu.com failed, status code 4
+2017-09-16 22:21:55,833 - [connectionpool.py:395] - DEBUG - https://passport.baidu.com:443 "GET /v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2f%3fbdorz_come%3d1 HTTP/1.1" 200 None
+2017-09-16 22:21:55,927 - [webpage_crawler.py:116] - INFO - url:http://www.baidu.com/more/,level:1 start to crawl
+2017-09-16 22:21:56,016 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.baidu.com
+2017-09-16 22:21:56,227 - [connectionpool.py:395] - DEBUG - http://www.baidu.com:80 "GET /more/ HTTP/1.1" 200 11633
+2017-09-16 22:23:47,203 - [mini_spider.py:100] - INFO - Starting mini spider
+2017-09-16 22:23:47,204 - [webpage_crawler.py:116] - INFO - url:http://www.baidu.com
+,level:0 start to crawl
+2017-09-16 22:23:47,210 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.baidu.com
+2017-09-16 22:23:47,636 - [connectionpool.py:395] - DEBUG - http://www.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:23:47,641 - [webpage_crawler.py:116] - INFO - url:http://map.baidu.com,level:1 start to crawl
+2017-09-16 22:23:47,642 - [webpage_crawler.py:116] - INFO - url:http://ir.baidu.com,level:1 start to crawl
+2017-09-16 22:23:47,642 - [webpage_crawler.py:116] - INFO - url:http://home.baidu.com,level:1 start to crawl
+2017-09-16 22:23:47,643 - [webpage_crawler.py:116] - INFO - url:http://jianyi.baidu.com/,level:1 start to crawl
+2017-09-16 22:23:47,643 - [webpage_crawler.py:116] - INFO - url:http://news.baidu.com,level:1 start to crawl
+2017-09-16 22:23:47,644 - [webpage_crawler.py:116] - INFO - url:http://tieba.baidu.com,level:1 start to crawl
+2017-09-16 22:23:47,645 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): map.baidu.com
+2017-09-16 22:23:47,646 - [webpage_crawler.py:116] - INFO - url:http://www.hao123.com,level:1 start to crawl
+2017-09-16 22:23:47,648 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): ir.baidu.com
+2017-09-16 22:23:47,651 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): jianyi.baidu.com
+2017-09-16 22:23:47,651 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): home.baidu.com
+2017-09-16 22:23:47,654 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): news.baidu.com
+2017-09-16 22:23:47,655 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.hao123.com
+2017-09-16 22:23:47,656 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): tieba.baidu.com
+2017-09-16 22:23:47,861 - [connectionpool.py:395] - DEBUG - http://map.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:23:48,108 - [connectionpool.py:395] - DEBUG - http://jianyi.baidu.com:80 "GET / HTTP/1.1" 302 0
+2017-09-16 22:23:48,113 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): help.baidu.com
+2017-09-16 22:23:48,478 - [connectionpool.py:395] - DEBUG - http://tieba.baidu.com:80 "GET / HTTP/1.1" 302 0
+2017-09-16 22:23:48,482 - [connectionpool.py:818] - DEBUG - Starting new HTTPS connection (1): tieba.baidu.com
+2017-09-16 22:23:48,495 - [connectionpool.py:395] - DEBUG - http://news.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:23:48,554 - [connectionpool.py:395] - DEBUG - http://help.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:23:48,559 - [connectionpool.py:395] - DEBUG - http://ir.baidu.com:80 "GET / HTTP/1.1" 302 749
+2017-09-16 22:23:48,591 - [connectionpool.py:395] - DEBUG - http://www.hao123.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:23:48,720 - [webpage_crawler.py:116] - INFO - url:http://v.baidu.com,level:1 start to crawl
+2017-09-16 22:23:48,721 - [connectionpool.py:395] - DEBUG - http://ir.baidu.com:80 "GET /phoenix.zhtml?c=188488&p=irol-irhome HTTP/1.1" 200 4212
+2017-09-16 22:23:48,732 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): v.baidu.com
+2017-09-16 22:23:48,815 - [connectionpool.py:395] - DEBUG - https://tieba.baidu.com:443 "GET /index.html HTTP/1.1" 200 None
+2017-09-16 22:23:48,914 - [webpage_crawler.py:116] - INFO - url:http://www.baidu.com/duty/,level:1 start to crawl
+2017-09-16 22:23:48,918 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.baidu.com
+2017-09-16 22:23:48,933 - [connectionpool.py:395] - DEBUG - http://www.baidu.com:80 "GET /duty/ HTTP/1.1" 200 2451
+2017-09-16 22:23:49,088 - [webpage_crawler.py:77] - ERROR - Connection Error url http://home.baidu.com
+2017-09-16 22:23:49,088 - [webpage_crawler.py:128] - ERROR - crawl url http://home.baidu.com failed, status code 4
+2017-09-16 22:23:49,177 - [connectionpool.py:395] - DEBUG - http://v.baidu.com:80 "GET / HTTP/1.1" 200 None
+2017-09-16 22:23:49,572 - [webpage_crawler.py:116] - INFO - url:http://www.baidu.com/bdorz/login.gif?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2f%3fbdorz_come%3d1,level:1 start to crawl
+2017-09-16 22:23:49,573 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.baidu.com
+2017-09-16 22:23:49,587 - [connectionpool.py:395] - DEBUG - http://www.baidu.com:80 "GET /bdorz/login.gif?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2f%3fbdorz_come%3d1 HTTP/1.1" 302 161
+2017-09-16 22:23:49,590 - [connectionpool.py:818] - DEBUG - Starting new HTTPS connection (1): passport.baidu.com
+2017-09-16 22:23:49,627 - [webpage_crawler.py:116] - INFO - url:http://www.baidu.com/more/,level:1 start to crawl
+2017-09-16 22:23:49,630 - [connectionpool.py:207] - DEBUG - Starting new HTTP connection (1): www.baidu.com
+2017-09-16 22:23:50,000 - [connectionpool.py:395] - DEBUG - http://www.baidu.com:80 "GET /more/ HTTP/1.1" 200 11633
+2017-09-16 22:23:50,101 - [connectionpool.py:395] - DEBUG - https://passport.baidu.com:443 "GET /v2/?login&tpl=mn&u=http%3A%2F%2Fwww.baidu.com%2f%3fbdorz_come%3d1 HTTP/1.1" 200 None

@@ -1,4 +1,4 @@
-#/usr/bin/env python
+# /usr/bin/env python
 # -*- coding:utf-8 -*-
 #
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
@@ -22,17 +22,15 @@ Date:    2017/07/02 17:16
 3 多线程抓取
 4 网页存储为文件
 """
-import Queue
 import argparse
-import os
 import logging
+import os
 
-import webpage_exception
 import webpage_config
 import webpage_manager
 
-
 __version__ = 1.0
+
 
 def create_logger_handler(error_log='test.log'):
     """
@@ -84,9 +82,9 @@ def main():
     if len(args.c) > 0 and os.path.exists(args.c):
         conf_file = args.c
 
-    if os.path.isfile(conf_file) is False:
+    if not os.path.isfile(conf_file):
         logging.error("conf file not exists {0}".format(conf_file))
-        os.exit(1)
+        os._exit(1)
 
     # 任务队列
     try:
@@ -94,15 +92,24 @@ def main():
         config.load('spider')
     except Exception as e:
         logging.error("load conf failed message {0}".format(e.message))
-        os.exit(2)
+        os._exit(2)
 
     # 设置日志
-    create_logger_handler(config.get('error_log'))
-    logging.info("Starting mini spider")
+    try:
+        error_log = config.get('error_log')
+    except Exception as e:
+        logging.error(u"{0}".format(e.message))
+        os._exists(3)
+
+    try:
+        create_logger_handler(error_log)
+        logging.info("Starting mini spider")
+        manager = webpage_manager.Manager(config)
+        manager.run()
+    except Exception as e:
+        logging.error(u"{0}".format(e.message))
+        os._exit(99)
 
 
-    manager = webpage_manager.Manager(config)
-    manager.run()
-    
 if __name__ == "__main__":
     main()

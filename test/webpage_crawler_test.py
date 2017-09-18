@@ -1,4 +1,4 @@
-#/usr/bin/env python
+# /usr/bin/env python
 # -*- coding:utf-8 -*-
 #
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
@@ -21,6 +21,7 @@ class MockManager(object):
     """
     mock a test object
     """
+
     def run(self):
         """
         mock run method
@@ -55,6 +56,7 @@ class CrawlerTest(unittest.TestCase):
             assert result[1].find("http://www.baidu.com") != -1
         else:
             assert result[0] is True
+
 
 if __name__ == "__main__":
     unittest.main()

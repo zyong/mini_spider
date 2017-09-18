@@ -52,8 +52,8 @@ AppleWebKit/534.46 (KHTML,like Gecko) Version/5.1 Mobile Safari/10600.6.3 \
         :timeout: int 抓取超时秒
         :return: Bool, Int
         """
-        if (url.startswith("http://") is False) and \
-                 (url.startswith("https://") is False):
+        if (not url.startswith("http://")) and \
+                (not url.startswith("https://")):
             url = "http://" + url
 
         url = url.strip()
@@ -63,7 +63,7 @@ AppleWebKit/534.46 (KHTML,like Gecko) Version/5.1 Mobile Safari/10600.6.3 \
             "User-Agent": self.PC_UA
         }
         try:
-            r = requests.get(url, timeout=timeout)
+            r = requests.get(url, timeout=timeout, headers=headers)
         except AttributeError as e:
             logging.error("attribute error %s with url".format(e.message, url))
             return False, 1

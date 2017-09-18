@@ -25,6 +25,10 @@ class SeedFileLoad(object):
         """
         url_set = set()
         with open(self._seed_file, 'r') as f:
-            url_set.add(f.readline())
+            while True:
+                line = f.readline()
+                if not line:
+                    break
+                url_set.add(line)
 
         return url_set

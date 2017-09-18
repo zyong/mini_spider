@@ -9,7 +9,7 @@ webpage_parser.py
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/07/05 22:09
 """
-
+import logging
 from bs4 import BeautifulSoup
 import urlparse
 
@@ -28,7 +28,11 @@ class Parser(object):
         """
         _url_set = set()
 
-        soup = BeautifulSoup(document, 'html.parser')
+        try:
+            soup = BeautifulSoup(document, 'html.parser')
+        except Exception as e:
+            logging.error("{0} page parser failed".format(source_url))
+            return _url_set
 
         for link in soup.find_all('a'):
             _link = link.get('href')
@@ -71,7 +75,7 @@ class Parser(object):
                 return u"{0}:{1}".format(protocol, new_link)
             else:
                 if port != 80 and port is not None:
-                    new_link = u"{0}://{1}:{2}{3}".format(protocol, hostname, port, new_link)
+                    new_link = u"{0}://{1}:{2}/{3}".format(protocol, hostname, port, new_link)
                 else:
-                    new_link = u"{0}://{1}{2}".format(protocol, hostname, new_link)
+                    new_link = u"{0}://{1}/{2}".format(protocol, hostname, new_link)
                 return new_link

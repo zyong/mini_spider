@@ -13,6 +13,7 @@ import base64
 import unittest
 import sys
 import os
+import urllib
 
 sys.path.append("..")
 import webpage_saver
@@ -57,7 +58,7 @@ class SaverTest(unittest.TestCase):
 """
         url = "http://pycm.baidu.com:8081/page1.html"
         self.saver.save(url, content)
-        file = base64.urlsafe_b64encode(url)
+        file = urllib.quote(url)
         path = "{0}/{1}".format(config.get('output_directory'), file)
         assert os.path.exists(path) is True
 

@@ -1,4 +1,4 @@
-#/usr/bin/env python
+# /usr/bin/env python
 # -*- coding:utf-8 -*-
 #
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
@@ -9,14 +9,11 @@ webpage_saver.py
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/07/05 22:10
 """
-import base64
 import os
-import urllib
 import re
-
 import logging
-
 import sys
+import urllib
 
 
 class Saver(object):
@@ -44,11 +41,11 @@ class Saver(object):
         if self._pattern.match(url) is None:
             return False
 
-        filename = base64.urlsafe_b64encode(url)
+        filename = urllib.quote(url, safe="")
         path = self._config.get('output_directory')
         real_path = os.path.abspath(path)
         file_path = real_path + os.sep + filename
-        if os.path.exists(real_path) is False:
+        if not os.path.exists(real_path):
             os.makedirs(real_path)
 
         try:
