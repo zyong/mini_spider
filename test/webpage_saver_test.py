@@ -58,7 +58,7 @@ class SaverTest(unittest.TestCase):
 """
         url = "http://pycm.baidu.com:8081/page1.html"
         self.saver.save(url, content)
-        file = urllib.quote(url)
+        file = urllib.quote(url, safe="")
         path = "{0}/{1}".format(config.get('output_directory'), file)
         assert os.path.exists(path) is True
 
