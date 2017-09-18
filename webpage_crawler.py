@@ -42,7 +42,6 @@ AppleWebKit/534.46 (KHTML,like Gecko) Version/5.1 Mobile Safari/10600.6.3 \
         self._manager = manager
         self._mutex = threading.Lock()
 
-        # 网页保持程序
         super(Crawler, self).__init__(name=thread_name)
 
     def downloader(self, url, timeout):

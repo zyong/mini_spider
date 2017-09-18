@@ -94,7 +94,6 @@ def main():
         logging.error("load conf failed message {0}".format(e.message))
         os._exit(2)
 
-    # 设置日志
     try:
         error_log = config.get('error_log')
     except Exception as e:
@@ -102,6 +101,7 @@ def main():
         os._exists(3)
 
     try:
+        # 设置日志
         create_logger_handler(error_log)
         logging.info("Starting mini spider")
         manager = webpage_manager.Manager(config)

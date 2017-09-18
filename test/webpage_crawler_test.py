@@ -55,7 +55,7 @@ class CrawlerTest(unittest.TestCase):
         if result[0] is True:
             assert result[1].find("http://www.baidu.com") != -1
         else:
-            assert result[0] is True
+            assert result[1] > 0
 
 
 if __name__ == "__main__":
