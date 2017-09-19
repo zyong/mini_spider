@@ -1,4 +1,4 @@
-#/usr/bin/env python
+#!/usr/bin/env python
 # -*- coding:utf-8 -*-
 #
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
@@ -29,6 +29,8 @@ class SeedFileLoad(object):
                 line = f.readline()
                 if not line:
                     break
+                if not line.strip():
+                    continue
                 url_set.add(line)
 
         return url_set

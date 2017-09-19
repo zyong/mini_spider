@@ -1,4 +1,4 @@
-# /usr/bin/env python
+#!/usr/bin/env python
 # -*- coding:utf-8 -*-
 #
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
@@ -98,7 +98,7 @@ def main():
         error_log = config.get('error_log')
     except Exception as e:
         logging.error(u"{0}".format(e.message))
-        os._exists(3)
+        os._exit(3)
 
     try:
         # 设置日志
