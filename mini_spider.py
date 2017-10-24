@@ -4,7 +4,7 @@
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
 #
 """
-mini_spider.py
+网页抓取脚本的主程序和启动程序，实现程序的命令行参数配置功能和全局日志的设置
 
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/07/02 17:16
@@ -25,6 +25,9 @@ Date:    2017/07/02 17:16
 import argparse
 import logging
 import os
+import traceback
+
+import sys
 
 import webpage_config
 import webpage_manager
@@ -34,7 +37,7 @@ __version__ = 1.0
 
 def create_logger_handler(error_log='test.log'):
     """
-    创建logger
+    创建logger，日志设置函数，添加日志的handler
     :return:
     """
     # get the root logger
@@ -67,16 +70,17 @@ def main():
     :return:
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument("-v", help="version info",
+    parser.add_argument("-v", "--version", help="Show the version info of Mini Spider",
                         action="store_true")
-    parser.add_argument("-c", help="config file",
+    parser.add_argument("-c", "--config",
+                        help="config file, The default is spider.conf",
                         default='spider.conf')
     args = parser.parse_args()
 
     # 默认配置文件
     conf_file = './spider.conf'
-    if args.v:
-        print "version:{0}".format(__version__)
+    if args.version:
+        print "Mini Spider version:{0}".format(__version__)
         return
 
     if len(args.c) > 0 and os.path.exists(args.c):
@@ -84,32 +88,20 @@ def main():
 
     if not os.path.isfile(conf_file):
         logging.error("conf file not exists {0}".format(conf_file))
-        os._exit(1)
+        sys.exit(1)
 
-    # 任务队列
     try:
         config = webpage_config.Config(conf_file)
         config.load('spider')
-    except Exception as e:
-        logging.error("load conf failed message {0}".format(e.message))
-        os._exit(2)
-
-    try:
         error_log = config.get('error_log')
-    except Exception as e:
-        logging.error(u"{0}".format(e.message))
-        os._exit(3)
-
-    try:
         # 设置日志
         create_logger_handler(error_log)
         logging.info("Starting mini spider")
         manager = webpage_manager.Manager(config)
         manager.run()
-    except Exception as e:
-        logging.error(u"{0}".format(e.message))
-        os._exit(99)
-
+    except:
+        logging.error(traceback.format_exc())
+        sys.exit(1)
 
 if __name__ == "__main__":
     main()
