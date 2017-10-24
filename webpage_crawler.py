@@ -26,6 +26,11 @@ import webpage_saver
 class Crawler(threading.Thread):
     """
     webpage crawler class
+
+    Attributes:
+      _manager: webpage_manager object
+      _mutex: thread lock object
+      
     """
     PC_UA = "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html）"
 
@@ -35,9 +40,11 @@ AppleWebKit/534.46 (KHTML,like Gecko) Version/5.1 Mobile Safari/10600.6.3 \
 
     def __init__(self, manager, thread_name):
         """
+        init crawler class
 
-        :param manager: webpage_manager.Manager 任务管理程序
-        :param thread_name: string 抓取线程名
+        Args:
+          manager: webpage_manager.Manager 任务管理程序
+          thread_name: string 抓取线程名
         """
         self._manager = manager
         self._mutex = threading.Lock()
@@ -47,9 +54,15 @@ AppleWebKit/534.46 (KHTML,like Gecko) Version/5.1 Mobile Safari/10600.6.3 \
     def downloader(self, url, timeout):
         """
         执行实际的抓取操作
-        :url: string
-        :timeout: int 抓取超时秒
-        :return: Bool, Int
+
+        Args:
+          url: string
+          timeout: int 抓取超时秒
+        Returns: 
+          返回两个值,(bool, string|int)
+          true 抓取成功, 第二个结果为抓取返回的内容
+          false 抓取失败, 第二个结果为具体失败的原因
+
         """
         if (not url.startswith("http://")) and \
                 (not url.startswith("https://")):

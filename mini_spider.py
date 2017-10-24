@@ -38,7 +38,9 @@ __version__ = 1.0
 def create_logger_handler(error_log='test.log'):
     """
     创建logger，日志设置函数，添加日志的handler
-    :return:
+    Args:
+      error_log: 写错误日志的文件名
+
     """
     # get the root logger
     logger = logging.getLogger()
@@ -66,8 +68,8 @@ def create_logger_handler(error_log='test.log'):
 
 def main():
     """
-    主程序
-    :return:
+    主程序,处理命令行参数解析,执行网页抓取控制程序
+
     """
     parser = argparse.ArgumentParser()
     parser.add_argument("-v", "--version", help="Show the version info of Mini Spider",

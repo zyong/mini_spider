@@ -12,16 +12,25 @@ Date:    2017/08/20 16:15
 
 class SeedFileLoad(object):
     """
-    seed load class
+    加载种子文件提供给网页抓取的初始化
+    
+    Attributes:
+      _seed_file: 种子文件地址
+
     """
 
     def __init__(self, seed_file):
+      """
+      init SeedFileLoad class
+      """
         self._seed_file = seed_file
 
     def get(self):
         """
         获取种子数据
-        :return:
+        Returns:
+          set集合数据，包含全部url
+
         """
         url_set = set()
         with open(self._seed_file, 'r') as f:

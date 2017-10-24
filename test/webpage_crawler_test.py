@@ -4,14 +4,14 @@
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
 #
 """
-webpage_crawler_test.py.py
+test webpage_crawler
 
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/09/16 18:04
 """
 
-import unittest
 import sys
+import unittest
 
 sys.path.append("..")
 import webpage_crawler
@@ -25,14 +25,12 @@ class MockManager(object):
     def run(self):
         """
         mock run method
-        :return:
         """
         pass
 
     def add_new_task(self):
         """
         mock add method
-        :return:
         """
         pass
 
@@ -40,6 +38,8 @@ class MockManager(object):
 class CrawlerTest(unittest.TestCase):
     """
     test crawler class
+    Attributes:
+      crawler: Crawler object
     """
 
     def setUp(self):
@@ -49,7 +49,6 @@ class CrawlerTest(unittest.TestCase):
     def test_downloader(self):
         """
         test downloader method
-        :return:
         """
         result = self.crawler.downloader("http://www.baidu.com/", 1)
         if result[0] is True:

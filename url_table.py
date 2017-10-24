@@ -26,8 +26,11 @@ class UrlTable(object):
     def insert_url(self, url):
         """
         向集合中添加url，线程安全
-        :param url: 需要插入的链接
-        :return: False 重复插入，True 非重复插入
+        Args: 
+          url: 需要插入的链接
+
+        Returns: 
+          False 重复插入，True 非重复插入
         """
         result = True
         self._mutex.acquire()

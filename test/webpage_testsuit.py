@@ -4,21 +4,21 @@
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
 #
 """
-webpage_testsuit.py
+ webpage test suite, add test case to exec
 
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/09/16 20:25
 """
 
-import unittest
 import sys
+import unittest
 
 sys.path.append('..')
+import url_table_test
 import webpage_config_test
 import webpage_crawler_test
 import webpage_parser_test
 import webpage_saver_test
-import url_table_test
 
 
 if __name__ == "__main__":

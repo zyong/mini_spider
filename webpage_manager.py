@@ -20,8 +20,16 @@ import webpage_crawler
 class Manager(object):
     """
     manager crawler task
+
+    Attributes:
+      _config: config object
+      _crawl_task_queue: task queue
+      _crawl_threads: task thread list
+      url_table: UrlTable object
     """
+
     def __init__(self, config):
+      """init manager class"""
         self._config = config
         self._crawl_task_queue = Queue.Queue()
         self._crawl_threads = []
@@ -33,7 +41,6 @@ class Manager(object):
         1 设置抓取任务队列
         2 初始化任务线程
         3 等待任务队列执行结束
-        :return:
         """
 
         # 添加种子链接
@@ -55,9 +62,10 @@ class Manager(object):
         """
         add a new url to queue if url is new
 
-        :param url:  url
-        :param level: link depth
-        :return:
+        Args: 
+         url:  url
+         level: link depth
+
         """
 
         # use url_table check whether new url
@@ -70,28 +78,28 @@ class Manager(object):
 
     def get_task(self):
         """
-        get new task
-        :return:
+        thread get new task
+        Returns:
+          (url, level) 元组
         """
         return self._crawl_task_queue.get()
 
     def task_done(self):
         """
-        task done
-        :return:
+        exec queue task done
         """
         self._crawl_task_queue.task_done()
 
     def get_config(self):
         """
         get config object
-        :return:
+        Returns:
+          config object
         """
         return self._config
 
     def _join(self):
         """
         join queue
-        :return:
         """
         self._crawl_task_queue.join()

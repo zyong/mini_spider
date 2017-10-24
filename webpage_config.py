@@ -18,6 +18,11 @@ import webpage_exception
 class Config(object):
     """
     config file load class
+
+    Attributes:
+      _config: ConfigParser object
+      _config_file: config file address
+
     """
 
     # conf key value dict
@@ -25,8 +30,7 @@ class Config(object):
 
     def __init__(self, config_file='spider.conf'):
         """
-         :param file string 配置文件名
-         :return: None
+        init config class
         """
         self._config = ConfigParser.ConfigParser()
         self._config_file = config_file
@@ -34,8 +38,9 @@ class Config(object):
     def load(self, section='spider'):
         """
 
-        :param section: config file section
-        :return: None
+        Args:
+          section: config file section
+
         """
         with open(self._config_file, 'r') as f:
             self._config.readfp(f)
@@ -46,8 +51,12 @@ class Config(object):
     def get(self, key):
         """
 
-        :param key: conf file field
-        :return: String |Exception
+        Args: 
+          key: conf file field
+        Returns: 
+          String if successful 
+        Raises:
+          webpage_exception: conf field not find
         """
         if key in self.conf_key:
             return self.conf_key[key]

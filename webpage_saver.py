@@ -20,12 +20,16 @@ import urllib
 class Saver(object):
     """
     save web page content
+    Attributes:
+      _config: config object
+      _pattern: 匹配url的规则
     """
 
     def __init__(self, config):
         """
-
-        :param config:
+        init saver object
+        Args:
+          config: config object
         """
         self._config = config
         target_url_pattern = self._config.get('target_url')
@@ -34,9 +38,11 @@ class Saver(object):
     def save(self, url, document):
         """
         将网页保存到文件
-        :param url: string
-        :param document: string
-        :return:
+        Args:
+          url: string
+          document: string
+        Returns:
+          true if successful, false if save failed
         """
         # check url whether match pattern
         if self._pattern.match(url) is None:

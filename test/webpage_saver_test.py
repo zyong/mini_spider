@@ -4,15 +4,15 @@
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
 #
 """
-webpage_saver_test.py
+test webpage_saver class
 
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/09/16 20:35
 """
 import base64
-import unittest
-import sys
 import os
+import sys
+import unittest
 import urllib
 
 sys.path.append("..")
@@ -26,8 +26,10 @@ class MockConfig(object):
     def get(self, key):
         """
 
-        :param key: conf field
-        :return:
+        Args:
+          key: conf field
+        Returns:
+          return config string
         """
         if key == "target_url":
             return ".*.(htm|html)$"
@@ -42,8 +44,7 @@ class SaverTest(unittest.TestCase):
     """
     def test_save(self):
         """
-
-        :return:
+        test save file
         """
         config = MockConfig()
         self.saver = webpage_saver.Saver(config)

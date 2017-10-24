@@ -4,14 +4,14 @@
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
 #
 """
-url_table_test.py
+test url_table class
 
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/09/16 20:52
 """
 
-import unittest
 import sys
+import unittest
 
 sys.path.append('../')
 import url_table
@@ -21,10 +21,10 @@ class UrlTableTest(unittest.TestCase):
     """
     url table class test
     """
+
     def test_insert_url(self):
         """
         test insert url method
-        :return:
         """
         url1 = "http://pycm.baidu.com:8081"
 

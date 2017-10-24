@@ -4,15 +4,15 @@
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
 #
 """
-webpage_parser_test.py
+test webpage_parser class
 
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/09/16 20:10
 """
 
-import unittest
-import sys
 import os
+import sys
+import unittest
 
 sys.path.append("..")
 import webpage_parser
@@ -26,7 +26,6 @@ class ParserTest(unittest.TestCase):
     def test_get_url(self):
         """
         test get url method
-        :return:
         """
         if os.path.exists('test.xhtml') is False:
             print "test.xhtml file not exists"

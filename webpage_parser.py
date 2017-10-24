@@ -23,9 +23,11 @@ class Parser(object):
     def get_url(self, source_url, document):
         """
         获取所有页面的url
-        :param source_url:string
-        :param document:string
-        :return:set
+        Args:
+          source_url:string
+          document:string
+        Returns:
+          url set data
         """
         _url_set = set()
 
@@ -58,9 +60,11 @@ class Parser(object):
         1 当前站点的url
             . url绝对地址
             . url相对地址
-        :param source_url: source url
-        :param new_link:
-        :return:
+        Args:
+          source_url: source link url
+          new_link: new link url 
+        Returns:
+          add http header url string
         """
         parser = urlparse.urlparse(source_url)
         port = parser.port

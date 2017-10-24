@@ -4,14 +4,14 @@
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
 #
 """
-webpage_config_test.py
+test webpage_config  class
 
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/09/16 18:37
 """
 
-import unittest
 import sys
+import unittest
 
 sys.path.append("..")
 import webpage_config
@@ -20,15 +20,17 @@ import webpage_config
 class ConfigLoadTest(unittest.TestCase):
     """
     test manager class
+    Attributes:
+      config: webpage config object
     """
     def setUp(self):
+      """init ConfigLoadTest"""
         self.config = webpage_config.Config('./test.conf')
         self.config.load()
 
     def test_get(self):
         """
         test get conf field method
-        :return:
         """
         assert self.config.get('url_list_file') == './urls'
         assert self.config.get('output_directory') == './output'
