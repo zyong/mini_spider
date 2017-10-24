@@ -4,7 +4,7 @@
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
 #
 """
-webpage_config.py
+配置数据解析模块
 
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/08/20 16:15

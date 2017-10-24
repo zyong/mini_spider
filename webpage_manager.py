@@ -4,11 +4,12 @@
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
 #
 """
-webpage_manager.py
+网页抓取工作的流程控制模块，控制抓取任务的初始化，调度控制
 
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/08/20 19:24
 """
+
 import Queue
 
 import seedfile_load

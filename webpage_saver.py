@@ -4,14 +4,15 @@
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
 #
 """
-webpage_saver.py
+网页内容保存模块，通过读取配置文件数据保存结果到磁盘
 
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/07/05 22:10
 """
+
+import logging
 import os
 import re
-import logging
 import sys
 import urllib
 

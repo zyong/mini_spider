@@ -4,13 +4,14 @@
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
 #
 """
-webpage_parser.py
+网页内容解析模块，解析每个抓取到的网页内容
 
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/07/05 22:09
 """
-import logging
+
 from bs4 import BeautifulSoup
+import logging
 import urlparse
 
 

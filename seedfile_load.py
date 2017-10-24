@@ -4,7 +4,7 @@
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
 #
 """
-seedfile_load.py
+抓取种子加载模块,处理种子数据的load
 
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/08/20 16:15

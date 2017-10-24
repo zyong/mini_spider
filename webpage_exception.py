@@ -4,7 +4,7 @@
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
 #
 """
-webpage_exception.py
+网页抓取异常模块，处理全局的异常问题
 
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/09/16 21:24

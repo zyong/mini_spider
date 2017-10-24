@@ -4,23 +4,23 @@
 # Copyright (c) 2017 Baidu.com, Inc. All Rights Reserved
 #
 """
-webpage_crawler.py
+数据抓取模块,以多线程的方式抓取每条url，并下发保存处理
 
 Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/07/05 22:07
 """
 
-import threading
 import logging
 import requests
+import threading
 import time
 
 from requests import ReadTimeout
 from requests.exceptions import InvalidURL
 from requests.exceptions import ConnectionError
 
-import webpage_saver
 import webpage_parser
+import webpage_saver
 
 
 class Crawler(threading.Thread):
