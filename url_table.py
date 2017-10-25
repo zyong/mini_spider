@@ -6,7 +6,7 @@
 """
 url数据去重模块，解决抓取url数据的去重问题
 
-Authors: zhaoyong (zhaoyong01@baidu.com)
+Authors: zhaoyong(zhaoyong01@baidu.com)
 Date:    2017/08/20 16:15
 """
 

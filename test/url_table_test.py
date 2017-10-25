@@ -6,7 +6,7 @@
 """
 test url_table class
 
-Authors: zhaoyong (zhaoyong01@baidu.com)
+Authors: zhaoyong(zhaoyong01@baidu.com)
 Date:    2017/09/16 20:52
 """
 
@@ -28,8 +28,8 @@ class UrlTableTest(unittest.TestCase):
         """
         url1 = "http://pycm.baidu.com:8081"
 
-        urlTable = url_table.UrlTable()
-        urlTable.insert_url(url1)
-        result = urlTable.insert_url(url1)
+        url_table_obj = url_table.UrlTable()
+        url_table_obj.insert_url(url1)
+        result = url_table_obj.insert_url(url1)
 
-        assert result == False
+        assert result is False

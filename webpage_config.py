@@ -6,7 +6,7 @@
 """
 配置数据解析模块
 
-Authors: zhaoyong (zhaoyong01@baidu.com)
+Authors: zhaoyong(zhaoyong01@baidu.com)
 Date:    2017/08/20 16:15
 """
 
@@ -56,7 +56,7 @@ class Config(object):
         Returns: 
           String if successful 
         Raises:
-          webpage_exception: conf field not find
+          ConfigException: conf field not find
         """
         if key in self.conf_key:
             return self.conf_key[key]

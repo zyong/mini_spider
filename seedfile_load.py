@@ -6,9 +6,10 @@
 """
 抓取种子加载模块,处理种子数据的load
 
-Authors: zhaoyong (zhaoyong01@baidu.com)
+Authors: zhaoyong(zhaoyong01@baidu.com)
 Date:    2017/08/20 16:15
 """
+
 
 class SeedFileLoad(object):
     """
@@ -20,9 +21,9 @@ class SeedFileLoad(object):
     """
 
     def __init__(self, seed_file):
-      """
-      init SeedFileLoad class
-      """
+        """
+        init SeedFileLoad class
+        """
         self._seed_file = seed_file
 
     def get(self):

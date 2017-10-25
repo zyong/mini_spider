@@ -6,14 +6,13 @@
 """
 网页内容保存模块，通过读取配置文件数据保存结果到磁盘
 
-Authors: zhaoyong (zhaoyong01@baidu.com)
+Authors: zhaoyong(zhaoyong01@baidu.com)
 Date:    2017/07/05 22:10
 """
 
 import logging
 import os
 import re
-import sys
 import urllib
 
 
@@ -61,7 +60,5 @@ class Saver(object):
                 return True
         except IOError as e:
             logging.error("I/O error({0}): {1}".format(e.errno, e.strerror))
-        except Exception as e:
-            logging.error('other error {0}'.format(sys.exc_info()[0]))
 
         return False

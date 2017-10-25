@@ -6,7 +6,7 @@
 """
 网页内容解析模块，解析每个抓取到的网页内容
 
-Authors: zhaoyong (zhaoyong01@baidu.com)
+Authors: zhaoyong(zhaoyong01@baidu.com)
 Date:    2017/07/05 22:09
 """
 

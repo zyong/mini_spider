@@ -6,6 +6,6 @@
 """
 模块init文件
 
-Authors: zhaoyong (zhaoyong01@baidu.com)
+Authors: zhaoyong(zhaoyong01@baidu.com)
 Date:    2017/09/16 18:06
 """

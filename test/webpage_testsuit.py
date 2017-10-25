@@ -6,7 +6,7 @@
 """
  webpage test suite, add test case to exec
 
-Authors: zhaoyong (zhaoyong01@baidu.com)
+Authors: zhaoyong(zhaoyong01@baidu.com)
 Date:    2017/09/16 20:25
 """
 

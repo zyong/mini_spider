@@ -6,7 +6,7 @@
 """
 网页抓取脚本的主程序和启动程序，实现程序的命令行参数配置功能和全局日志的设置
 
-Authors: zhaoyong (zhaoyong01@baidu.com)
+Authors: zhaoyong(zhaoyong01@baidu.com)
 Date:    2017/07/02 17:16
 
 设计思路：

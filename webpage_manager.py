@@ -6,7 +6,7 @@
 """
 网页抓取工作的流程控制模块，控制抓取任务的初始化，调度控制
 
-Authors: zhaoyong (zhaoyong01@baidu.com)
+Authors: zhaoyong(zhaoyong01@baidu.com)
 Date:    2017/08/20 19:24
 """
 
@@ -29,7 +29,7 @@ class Manager(object):
     """
 
     def __init__(self, config):
-      """init manager class"""
+        """init manager class"""
         self._config = config
         self._crawl_task_queue = Queue.Queue()
         self._crawl_threads = []

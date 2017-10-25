@@ -23,8 +23,9 @@ class ConfigLoadTest(unittest.TestCase):
     Attributes:
       config: webpage config object
     """
+
     def setUp(self):
-      """init ConfigLoadTest"""
+        """init ConfigLoadTest"""
         self.config = webpage_config.Config('./test.conf')
         self.config.load()
 
