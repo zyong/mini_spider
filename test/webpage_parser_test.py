@@ -27,11 +27,13 @@ class ParserTest(unittest.TestCase):
         """
         test get url method
         """
-        if os.path.exists('test.xhtml') is False:
+        abs_path = os.path.dirname(os.path.abspath(__file__))
+        test_file_path = abs_path + os.path.sep + 'test.xhtml'
+        if os.path.exists(test_file_path) is False:
             print "test.xhtml file not exists"
             return False
 
-        with open('test.xhtml', 'r') as f:
+        with open(test_file_path, 'r') as f:
             self.content = f.read()
 
         parser = webpage_parser.Parser()

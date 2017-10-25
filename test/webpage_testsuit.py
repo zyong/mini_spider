@@ -10,15 +10,21 @@ Authors: zhaoyong(zhaoyong01@baidu.com)
 Date:    2017/09/16 20:25
 """
 
+import os
 import sys
 import unittest
 
-sys.path.append('../')
-import url_table_test
-import webpage_config_test
-import webpage_crawler_test
-import webpage_parser_test
-import webpage_saver_test
+#sys.path.append('./')
+file_path = os.path.dirname(os.path.realpath(__file__))
+# file_path  = 'test/'
+parent_path = os.path.realpath('%s/../' % file_path)
+sys.path.insert(0, parent_path)
+
+import test.url_table_test as url_table_test
+import test.webpage_config_test as webpage_config_test
+import test.webpage_crawler_test as webpage_crawler_test
+import test.webpage_parser_test as webpage_parser_test
+import test.webpage_saver_test as webpage_saver_test
 
 
 if __name__ == "__main__":

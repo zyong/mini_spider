@@ -10,6 +10,7 @@ Authors: zhaoyong (zhaoyong01@baidu.com)
 Date:    2017/09/16 18:37
 """
 
+import os
 import sys
 import unittest
 
@@ -26,7 +27,9 @@ class ConfigLoadTest(unittest.TestCase):
 
     def setUp(self):
         """init ConfigLoadTest"""
-        self.config = webpage_config.Config('./test.conf')
+        abs_path = os.path.dirname(os.path.abspath(__file__))
+        test_file_path = abs_path + os.path.sep + 'test.conf'
+        self.config = webpage_config.Config(test_file_path)
         self.config.load()
 
     def test_get(self):
