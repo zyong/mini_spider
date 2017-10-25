@@ -17,6 +17,10 @@ class UrlTable(object):
     """
     保留下载过的链接，提供判断链接是否已经下载过的方法
     线程安全
+
+    Attributes:
+        _crawled_url_set: 已经抓取的url集合
+        _mutex: thread lock object
     """
 
     def __init__(self):

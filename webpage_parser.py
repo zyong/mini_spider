@@ -24,10 +24,10 @@ class Parser(object):
         """
         获取所有页面的url
         Args:
-          source_url:string
-          document:string
+            source_url:string
+            document:string
         Returns:
-          url set data
+            url set data
         """
         _url_set = set()
 
@@ -61,10 +61,10 @@ class Parser(object):
             . url绝对地址
             . url相对地址
         Args:
-          source_url: source link url
-          new_link: new link url 
+            source_url: source link url
+            new_link: new link url
         Returns:
-          add http header url string
+            add http header url string
         """
         parser = urlparse.urlparse(source_url)
         port = parser.port

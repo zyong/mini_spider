@@ -21,7 +21,7 @@ class ConfigLoadTest(unittest.TestCase):
     """
     test manager class
     Attributes:
-      config: webpage config object
+        config: webpage config object
     """
 
     def setUp(self):

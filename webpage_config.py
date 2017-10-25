@@ -20,8 +20,8 @@ class Config(object):
     config file load class
 
     Attributes:
-      _config: ConfigParser object
-      _config_file: config file address
+        _config: ConfigParser object
+        _config_file: config file address
 
     """
 
@@ -52,11 +52,11 @@ class Config(object):
         """
 
         Args: 
-          key: conf file field
+            key: conf file field
         Returns: 
-          String if successful 
+            String if successful
         Raises:
-          ConfigException: conf field not find
+            ConfigException: conf field not find
         """
         if key in self.conf_key:
             return self.conf_key[key]

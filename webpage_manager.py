@@ -22,10 +22,10 @@ class Manager(object):
     manager crawler task
 
     Attributes:
-      _config: config object
-      _crawl_task_queue: task queue
-      _crawl_threads: task thread list
-      url_table: UrlTable object
+        url_table: UrlTable object
+        _config: config object
+        _crawl_task_queue: task queue
+        _crawl_threads: task thread list
     """
 
     def __init__(self, config):
@@ -58,13 +58,12 @@ class Manager(object):
         self._join()
 
     def add_new_task(self, url, level):
-        # type: (object, object) -> object
         """
         add a new url to queue if url is new
 
         Args: 
-         url:  url
-         level: link depth
+            url:  url
+            level: link depth
 
         """
 
@@ -80,7 +79,7 @@ class Manager(object):
         """
         thread get new task
         Returns:
-          (url, level) 元组
+            (url, level) 元组
         """
         return self._crawl_task_queue.get()
 
@@ -93,8 +92,9 @@ class Manager(object):
     def get_config(self):
         """
         get config object
+
         Returns:
-          config object
+            config object
         """
         return self._config
 

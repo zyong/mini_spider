@@ -27,9 +27,9 @@ class MockConfig(object):
         """
 
         Args:
-          key: conf field
+            key: conf field
         Returns:
-          return config string
+            return config string
         """
         if key == "target_url":
             return ".*.(htm|html)$"

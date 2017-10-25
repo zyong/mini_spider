@@ -39,7 +39,7 @@ class CrawlerTest(unittest.TestCase):
     """
     test crawler class
     Attributes:
-      crawler: Crawler object
+        crawler: Crawler object
     """
 
     def setUp(self):

@@ -20,15 +20,15 @@ class Saver(object):
     """
     save web page content
     Attributes:
-      _config: config object
-      _pattern: 匹配url的规则
+        _config: config object
+        _pattern: 匹配url的规则
     """
 
     def __init__(self, config):
         """
         init saver object
         Args:
-          config: config object
+            config: config object
         """
         self._config = config
         target_url_pattern = self._config.get('target_url')
@@ -38,10 +38,10 @@ class Saver(object):
         """
         将网页保存到文件
         Args:
-          url: string
-          document: string
+            url: string
+            document: string
         Returns:
-          true if successful, false if save failed
+            true if successful, false if save failed
         """
         # check url whether match pattern
         if self._pattern.match(url) is None:
