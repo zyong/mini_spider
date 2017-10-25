@@ -28,8 +28,8 @@ Date:    2017/07/02 17:16
 import argparse
 import logging
 import os
-import traceback
 import sys
+import traceback
 
 import webpage_config
 import webpage_manager
@@ -87,8 +87,8 @@ def main():
         print "Mini Spider version:{0}".format(__version__)
         return
 
-    if len(args.c) > 0 and os.path.exists(args.c):
-        conf_file = args.c
+    if len(args.config) > 0 and os.path.exists(args.config):
+        conf_file = args.config
 
     if not os.path.isfile(conf_file):
         logging.error("conf file not exists {0}".format(conf_file))

@@ -12,9 +12,10 @@ Authors: zhaoyong(zhaoyong01@baidu.com)
 Date:    2017/07/05 22:09
 """
 
-from bs4 import BeautifulSoup
 import logging
 import urlparse
+
+from bs4 import BeautifulSoup
 
 
 class Parser(object):
