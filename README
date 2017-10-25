@@ -16,10 +16,12 @@
 
 
 # 执行单元测试
-提供整体的执行套件，可以运行test目录下的webpage_testsuit.py文件
+需要进入test目录，执行目录下的单个测试文件或执行测试套件
+
+# 执行测试套件
 python webpage_testsuit.py
 
-也可以单个执行每个测试case
+# 单个执行每个测试case
 python -m unittest webpage_crawler_test
 
 # 执行抓取功能

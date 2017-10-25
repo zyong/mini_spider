@@ -59,9 +59,9 @@ AppleWebKit/534.46 (KHTML,like Gecko) Version/5.1 Mobile Safari/10600.6.3 \
             url: string
             timeout: int 抓取超时秒
         Returns: 
-          返回两个值,(bool, string|int)
-          true 抓取成功, 第二个结果为抓取返回的内容
-          false 抓取失败, 第二个结果为具体失败的原因
+            返回两个值,(bool, string|int)
+            true 抓取成功, 第二个结果为抓取返回的内容
+            false 抓取失败, 第二个结果为具体失败的原因
 
         """
         if (not url.startswith("http://")) and \

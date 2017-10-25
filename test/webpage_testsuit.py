@@ -14,9 +14,7 @@ import os
 import sys
 import unittest
 
-#sys.path.append('./')
 file_path = os.path.dirname(os.path.realpath(__file__))
-# file_path  = 'test/'
 parent_path = os.path.realpath('%s/../' % file_path)
 sys.path.insert(0, parent_path)
 
