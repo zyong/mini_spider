@@ -13,7 +13,7 @@ Date:    2017/09/16 20:25
 import sys
 import unittest
 
-sys.path.append('..')
+sys.path.append('../')
 import url_table_test
 import webpage_config_test
 import webpage_crawler_test
