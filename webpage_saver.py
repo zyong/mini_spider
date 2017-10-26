@@ -35,11 +35,7 @@ class Saver(object):
             config: Config object
         """
         self._config = config
-        try:
-            target_url_pattern = self._config.get('target_url')
-        except webpage_exception.ConfigException as e:
-            target_url_pattern = ".*.(htm|html)$"
-
+        target_url_pattern = self._config.get('target_url')
         self._pattern = re.compile(target_url_pattern)
 
     def save(self, url, document):
@@ -56,10 +52,7 @@ class Saver(object):
             return False
 
         filename = urllib.quote(url, safe="")
-        try:
-            path = self._config.get('output_directory')
-        except webpage_exception.ConfigException as e:
-            path = "./output"
+        path = self._config.get('output_directory')
         real_path = os.path.abspath(path)
         file_path = real_path + os.sep + filename
         if not os.path.exists(real_path):
